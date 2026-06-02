@@ -1,0 +1,9 @@
+.env
+
+__pycache__/
+
+vectorstore/
+
+data/papers/
+
+*.pyc
