@@ -39,11 +39,10 @@ from src.citations import (
 
 st.set_page_config(
     page_title="Research Paper QA Assistant",
-    page_icon="📚",
     layout="wide"
 )
 
-st.title("📚 Research Paper QA Assistant")
+st.title(" Research Paper QA Assistant")
 
 st.markdown(
     """
@@ -96,7 +95,7 @@ if "all_summaries_cache" not in st.session_state:
 
 with st.sidebar:
 
-    st.header("📄 Document Upload")
+    st.header(" Document Upload")
 
     uploaded_files = st.file_uploader(
         "Upload PDF Research Papers",
@@ -237,7 +236,7 @@ if mode == "Paper Summary":
                         ] = summary
 
                 st.markdown(
-                    f"# 📄 {selected_paper}"
+                    f"# {selected_paper}"
                 )
 
                 st.markdown(
@@ -278,7 +277,7 @@ if mode == "Paper Summary":
                 for paper_name, summary in summaries.items():
 
                     st.markdown(
-                        f"# 📄 {paper_name}"
+                        f"# {paper_name}"
                     )
 
                     st.markdown(summary)
@@ -318,7 +317,7 @@ if mode == "Paper Summary":
                             )
 
                     st.markdown(
-                        "# 📊 Comparative Analysis"
+                        "#  Comparative Analysis"
                     )
 
                     st.markdown(
@@ -449,7 +448,7 @@ if mode == "Question Answering":
                     if citations:
 
                         st.markdown(
-                            "### 📖 Sources"
+                            "### Sources"
                         )
 
                         for citation in citations:
