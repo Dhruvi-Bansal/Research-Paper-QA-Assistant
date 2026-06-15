@@ -1,6 +1,8 @@
 from langchain_community.vectorstores import FAISS
 
-from src.embeddings import get_embedding_model
+from src.embeddings import (
+    get_embedding_model
+)
 
 VECTOR_DB_PATH = "vectorstore"
 
@@ -34,5 +36,10 @@ def get_retriever():
     db = load_vectorstore()
 
     return db.as_retriever(
-        search_kwargs={"k": 4}
+    search_type="mmr",
+    search_kwargs={
+        "k": 5,
+        "score_threshold":0.5,
+        "fetch_k": 10
+    }
     )

@@ -7,3 +7,5 @@ vectorstore/
 data/papers/
 
 *.pyc
+
+.venv
